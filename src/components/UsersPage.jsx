@@ -1141,7 +1141,7 @@ const UsersPage = () => {
     const [client, setClient] = useState(null);
     const [connected, setConnected] = useState(false);
 
-    useEffect(() => {
+    /*useEffect(() => {
         // Create a client instance
         const client = new Client('broker.hivemq.com', Number(8000), '/mqtt', 'clientId' + new Date().getTime());
 
@@ -1187,7 +1187,7 @@ const UsersPage = () => {
             message.destinationName = '/timekeeper/delete';
             client.send(message);
         }
-    };
+    };*/
 
     useEffect(() => {
         GetAllUsers();
@@ -1296,7 +1296,7 @@ const UsersPage = () => {
                         type: data.type_device,
                         id: data.id_device
                     }
-                    sendMessageMqtt(dataDeleteHardware);
+                    /*sendMessageMqtt(dataDeleteHardware);*/
                     setIsRefresh(prev => !prev);
                     handleModalCloseClick();
                     Swal.fire("Deleted!", "", "success");
