@@ -1,0 +1,403 @@
+/*Phần tab trong userDetail.js***********************************************************/
+.tabs {
+  display: flex;
+  /* Sửa lại thành flex, không phải flexbox */
+  justify-content: center;
+  /* Canh giữa các tab */
+  background: rgb(255, 255, 255);
+  /* Màu nền cho tab */
+  padding: 10px 20px;
+  /* Khoảng cách lề trên và dưới của tab */
+  position: relative;
+  /* Đảm bảo tabs nằm sát dưới app-header */
+  top: 5px;
+  left: 1px;
+  width: 98%;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  border-radius: 10px;
+}
+
+.tab {
+  padding: 10px 20px;
+  /* Khoảng cách lề của mỗi tab */
+  cursor: pointer;
+  /* Biến con trỏ thành pointer khi di chuột vào tab */
+  border-radius: 10px;
+  /* Bo tròn góc cho tab */
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  transition: background-color 0.3s ease-in-out;
+  /* Hiệu ứng mượt mà */
+}
+
+.tab:hover,
+
+
+.tab.active {
+  background: linear-gradient(#ffffff, #ffffff);
+  /* Màu nền khi tab được chọn */
+  width: 1000px;
+}
+
+.tab-content {
+  padding: 20px;
+  /* Khoảng cách lề cho nội dung của tab */
+}
+
+/*************************************************************************************************************/
+
+/* Phần bảng tron UserList.jsx ****************************************************************/
+.user-list-container {
+  margin: 20px;
+}
+
+.user-list-title {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 10px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+}
+
+.user-list-table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+  font-family: Arial, Helvetica, sans-serif;
+  table-layout: fixed;
+  border: 1px solid #090303;
+}
+
+.user-list-table th,
+.user-list-table td {
+  border: 1px solid #090303;
+  padding: 10px;
+}
+
+.table-scrollbar {
+  overflow: auto;
+  /* Sử dụng auto thay vì hidden để ngăn chặn việc thay đổi kích thước */
+  max-height: 400px;
+  /* Chiều cao tối đa của phần thân bảng */
+}
+
+/* Đặt chiều rộng của bảng trong phần thân bảng để cân xứng với phần tiêu đề */
+.table-scrollbar .user-list-table {
+  width: 100%
+    /* Trừ đi kích thước của thanh cuộn dọc */
+}
+
+.table-scrollbar::-webkit-scrollbar {
+  width: 0px;
+  /* Độ rộng của thanh cuộn */
+}
+
+.user-check-table {
+  width: 100px;
+  /* Đặt chiều rộng của bảng là 100% */
+  /* Thêm bất kỳ điều chỉnh kích thước khác nếu cần */
+}
+
+/**************************************************************************************************/
+
+/*Form nhập data trong UserList.jsx*****************************************************************/
+.vertical-form {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 11%;
+  left: 100%;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 30px 90px, rgba(0, 0, 0, 0.23) -7px 10px 6px;
+  transform: translate(-50%, -50%);
+}
+
+.vertical-form .form-group {
+  margin-bottom: 20px;
+}
+
+.vertical-form label {
+  margin-bottom: 5px;
+}
+
+.bordered-form {
+  border: 2px solid black;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.draggable-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.draggable-content {
+  background-color: white;
+}
+
+.vertical-form {
+  max-width: 300px;
+}
+
+.search-form {
+  margin-bottom: 40px;
+  width: 400px;
+}
+
+.icon-button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 30px;
+  color: #080807;
+  transition: color 0.3s;
+  margin-right: 20px;
+}
+
+.icon-button:hover {
+  color: #0056b3;
+}
+
+.icon-button:last-child {
+  margin-right: 0;
+  /* Loại bỏ margin phải của nút cuối cùng */
+}
+
+/***************************************************************************************************/
+
+
+/* Phần Thông tin admin trong userDetail.js*********************************************************/
+.tabs-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Canh giữa theo chiều ngang */
+  margin-top: 50px;
+  /* Điều chỉnh khoảng cách từ top */
+}
+
+.container-admin {
+  position: fixed;
+  /* Đặt phần tử ở vị trí cố định */
+  top: -14px;
+  /* Đặt top là 20px để nằm ở phía trên cùng */
+  right: 40px;
+  /* Đặt right là 20px để nằm ở phía bên phải */
+  display: inline-block;
+  margin-top: 35px;
+  z-index: 1100;
+}
+
+.admin-header {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.admin-icon {
+  font-size: 50px;
+  color: #fdfafa;
+}
+
+.admin-name {
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+  color: #fefdfd;
+}
+
+.dropdown-arrow {
+  margin-left: 5px;
+  font-size: 25px;
+}
+
+.admin-details {
+  position: absolute;
+  top: 120%;
+  left: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  z-index: 1000;
+  width: 200px;
+}
+
+.admin-details h2 {
+  margin: 0;
+  padding: 5px 0;
+}
+
+.admin-email {
+  font-size: 16px;
+}
+
+/**************************************************************************************/
+.menu-button {
+  position: fixed;
+  top: 80px;
+  left: 160px;
+  z-index: 1001;
+  background: #ebeaea;
+  border: none;
+  color: rgb(12, 12, 12);
+  font-size: 35px;
+  cursor: pointer;
+  padding: 15px;
+  width: 100%;
+  /* Kéo dài background */
+  height: 60px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  transition: left 0.3s ease;
+  /* Thêm transition cho hiệu ứng mượt mà */
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 0px 10px, rgba(0, 0, 0, 0.23) 0px 2px 6px;
+}
+
+.menu-button.closed {
+  left: 50px;
+  /* Vị trí của nút khi sidebar đóng */
+}
+
+.settings-button {
+  position: fixed;
+  top: 10px;
+  right: 40px;
+  z-index: 1001;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+.settings-container {
+  position: fixed;
+  top: 74px;
+  right: 50px;
+  z-index: 1001;
+}
+
+.settings-menu {
+  background-color: #111;
+  color: white;
+  border: 1px solid #575757;
+  border-radius: 5px;
+  margin-top: 5px;
+  padding: 10px;
+  z-index: 1002;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.settings-menu.open {
+  max-height: 200px;
+  opacity: 1;
+}
+
+.settings-menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.settings-menu ul li {
+  padding: 8px 0;
+  cursor: pointer;
+}
+
+.settings-menu ul li:hover {
+  background-color: #575757;
+}
+
+.logout-icon {
+  font-size: 24px;
+  margin-right: 8px;
+}
+
+.sidebar {
+  height: calc(100% - 60px);
+  width: 160px;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  background-color: #111;
+  padding-top: 90px;
+  transition: transform 0.3s ease, width 0.3s ease;
+  z-index: 900;
+}
+
+.sidebar.closed {
+  width: 50px;
+}
+
+.sidebar.closed .link-text {
+  display: none;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  /* padding: 8px 0; */
+  text-align: left;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.sidebar ul li a {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding-left: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.sidebar ul li a .icon {
+  margin-right: 8px;
+  font-size: 40px;
+}
+
+.sidebar ul li a:hover {
+  background-color: #575757;
+}
+
+
+.sidebar > ul > li > a {
+  padding: 5px 0px;
+}
+.active {
+  background-color: #575757;
+}
+
+.content {
+  transition: margin-left 0.3s ease;
+  padding: 20px;
+  margin-left: 10px;
+  margin-top: 30px;
+  background-color: #e7e7e7;
+  height: calc(100vh - 130px);
+  overflow: auto;
+}
+
+.shifted {
+  margin-left: 110px;
+}

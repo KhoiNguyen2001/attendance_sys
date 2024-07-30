@@ -1,0 +1,66 @@
+body {
+  margin: auto;
+  font-family: -apple-system, BlinkMacSystemFont, 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', san-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* height: 180vh; */
+  background:linear-gradient(#f6f4f4,#f6f4f4);
+  padding: 100px 10px 0px 40px; /* Chỉnh sửa padding cho phù hợp */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, monospace, Consola;
+}
+
+.app-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgb(32, 40, 32); /* màu nền */
+  padding: 0px;
+  color: rgb(242, 242, 245); /* màu chữ */
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;;
+  z-index: 1000;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none; /* Bỏ gạch chân */
+  color: inherit; /* Kế thừa màu từ phần tử cha */
+}
+
+.navbar-brand h1 {
+  margin: 0; /* Đảm bảo không có margin không cần thiết */
+  padding: 12px;
+  font-size: 30px; /* Điều chỉnh kích thước chữ */
+  font-family: Arial, Helvetica, sans-serif;
+  padding-left:50px; /* Dịch h1 sang phải */
+}
+
+
+.app-body {
+  display: flex;
+}
+
+.app-content {
+  margin-left: 200px; /* Đảm bảo giá trị này khớp với chiều rộng của sidebar */
+  padding: 20px;
+  margin-top: 30px; /* Đảm bảo nó không bị che bởi header */
+}
+
+.app-logo {
+  width: 80px; /* Đặt kích thước hình ảnh */
+  height: auto;
+  margin-left:50px;
+}
+.icon-large {
+  font-size: 24px; /* Adjust the size as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Ensure the icon takes the full height of the button */
+  width: 100%; /* Ensure the icon takes the full width of the button */
+}
