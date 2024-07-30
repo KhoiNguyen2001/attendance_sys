@@ -9,7 +9,7 @@ import MainPage from './components/MainPage';
 
 function App() {
     return (
-        <Router>
+        <Router path ="/">
             <div>
                 <header className="app-header">
                     <Link className="navbar-brand">
